@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fffaf2;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid rgb(227, 227, 227);
+  padding: 1em 3em;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.content-left {
+  grid-area: 1 / 1 / 2 / 5;
+}
+.content-right {
+  grid-area: 1 / 5 / 2 / 6;
+}
