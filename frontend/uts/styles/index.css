@@ -14,12 +14,23 @@ body {
   border-bottom: 1px solid rgb(227, 227, 227);
   padding: 1em 0;
   position: fixed;
+  z-index: 9999;
 }
 
 .navbar-content {
   display: flex;
   margin: auto;
+  align-items: center;
   width: 60%;
+}
+
+.navbar-content h3 {
+  color: #758045;
+  margin-right: 2em;
+}
+
+.navbar-content a {
+  margin-left: 1em;
 }
 
 .content {
@@ -27,13 +38,11 @@ body {
   margin: auto;
   padding-top: 5em;
   display: flex;
+  gap: 1em;
 }
 
 .content-left {
-  /* grid-area: 1 / 1 / 2 / 4; */
-}
-.content-right {
-  /* grid-area: 1 / 4 / 2 / 6; */
+  width: 100%;
 }
 
 .post {
@@ -52,6 +61,7 @@ body {
 
 .post-header div {
   margin-right: 2em;
+  padding-bottom: 0.6em;
 }
 
 .post-header .active {
@@ -75,12 +85,14 @@ body {
   border: none;
   background-color: #f0eeea;
   border-radius: 10px;
+  padding: 0 1em;
 }
 
 .post-content-options-wrap {
-  padding: 1em;
+  padding: 0 1em 1em;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .post-content-options {
@@ -94,12 +106,20 @@ body {
   border: 1px solid rgb(227, 227, 227);
   border-radius: 10px;
   padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 .post-content-option:nth-child(1),
 .post-content-option:nth-child(2),
 .post-content-option:nth-child(3) {
   margin-right: 1em;
+}
+
+.teem {
+  background-color: gray;
+  color: white;
+  position: absolute;
+  right: 0;
 }
 
 .post-content-option img {
@@ -143,4 +163,174 @@ body {
 
 .account-post-content p:nth-child(2) {
   margin: 2em 0em;
+}
+
+
+.account-post-footer {
+  display: flex;
+  align-items: center;
+}
+
+.account-post-footer div {
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.account-post-footer div:nth-child(2) {
+  margin-left: -10px;
+  z-index: 1;
+} 
+
+.account-post-footer div img {
+  width: 20px;
+  height: 20px;
+}
+
+.account-post-footer span {
+  font-size: 1.2ch;
+  color: #BBBABA;
+  margin-left: 1em;
+}
+
+.account-post-footer .command {
+  position: relative;
+  right: 0;
+}
+
+
+.topics-content {
+  width: 35vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1em;
+  border: 1px solid rgb(227, 227, 227);
+}
+
+.topics-content-title {
+  font-weight: bold;
+}
+
+.topics-content-options {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  margin: 1em 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.topics-content-options::-webkit-scrollbar {
+  display: none;
+}
+
+.topics-content-options div {
+  border: 1px solid rgb(227, 227, 227);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+.topics-treding {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.topics-treding span:nth-child(1) {
+  font-size: 1.2ch;
+  color: #D0975B;
+}
+
+.topics-treding span:nth-child(3) {
+  font-size: 1.2ch;
+  color: #BBBABA;
+}
+
+.teemers-follow {
+  border: 1px solid rgb(227, 227, 227);
+  padding: 1em;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+
+.teemers-follow-account {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.teemers-follow-title {
+  font-weight: bold;
+}
+
+.teemers-follow-account img {
+  border-radius: 50%;
+  margin-right: 0.5em;
+  width: 40px;
+  height: 40px;
+  top: 5em;
+}
+
+.teemers-follow-account div {
+  display: flex;
+  flex-direction: column;
+}
+
+.teemers-follow-account-desc span:nth-child(2) {
+  font-size: 1.2ch;
+  color: #BBBABA;
+}
+
+.teemers-follow-account .follow {
+  position: absolute;
+  right: 0;
+  font-size: 1.5ch;
+  padding: 0.3em 0.5em;
+  border-radius: 10px;
+  color: #BBBABA;
+  cursor: pointer;
+  border: 1px solid rgb(227, 227, 227);
+}
+
+.teemers-follow-account .follow:hover {
+  background-color: #FFF0E0;
+  color: #FF7B00;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#alert-internet {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideInFromBottom 0.5s ease-in-out forwards;
+}
+
+#alert-internet.show {
+  opacity: 1;
 }
