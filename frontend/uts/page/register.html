@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="../styles/register.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Registration Form</h2>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password"><br><br>
-            <input type="submit" value="Sign Up">
-            <p>or use your email for registration</p>
-            <a href="#">Sign In</a>
-        </form>
+  <div class="signup-container">
+    <form class="signup-form" action="../page/login.html" method="post">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="konfirmasi"> konfimasi Password</label>
+          <input type="konfirmasi" id="konfirmasi" name="konfirmasi" required>
+      </div>
+        <button type="submit">sign up</button>
+        <p class="signup-link">Sudah punya akun? <a href="../page/login.html">log in</a></p>
+    </form>
+    <div class="image">
+        <img src="../assets/logo museum.png">
     </div>
+</div>
 </body>
 </html>

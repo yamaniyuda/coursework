@@ -1,72 +1,94 @@
-/* styles/login.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
 
 body {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 }
 
-.wrapper {
-    width: 300px;
-    margin-right: 20px; /* Adjust as needed */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 5%;
 }
 
-.login {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.login-form {
+    flex: 2; 
+    max-width: 400px; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-    font-size: 24px;
+.image {
+    margin-left: 5%;
+    flex: 1; 
+}
+
+.image img {
+    width: 100%; 
+    height: auto; 
+}
+
+h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-input[type="text"],
-input[type="password"] {
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #555;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
+    background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
-a {
-    display: block;
+.signup-link {
     text-align: center;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
+    padding-top: 10px;
 }
 
-a:hover {
+.signup-link a {
+    color: #333;
     text-decoration: underline;
 }
 
-.fa {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #aaa;
+.signup-link a:hover {
+    color: #555;
 }
