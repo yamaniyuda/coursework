@@ -21,11 +21,32 @@ body {
 .navbar-content {
   display: flex;
   margin: auto;
+  align-items: center;
   width: 60%;
+  position: relative;
 }
+
 
 .navbar-content h3 {
   color: #758045;
+}
+
+.navbar-content input {
+  width: 30%;
+  margin-left: 10px;
+  border: none;
+  background-color: #f0eeea;
+  border-radius: 10px;
+  padding: 0.7em 1em;
+}
+
+.navbar-content div {
+  position: absolute;
+  right: 0;
+}
+
+.navbar-content a {
+  margin-left: 1em;
 }
 
 .content {
@@ -46,5 +67,6 @@ body {
 
 .masonry .box img {
   max-width: 100%;
+  width: 100%;
   border-radius: 15px;
 }
